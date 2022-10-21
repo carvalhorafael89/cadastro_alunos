@@ -1,8 +1,15 @@
 <h2><p>Detalhes de alunos</p></h2>
-<ul>
+<ul class="div_lateral">
     <li *ngFor="let aluno of lista_alunos">
-        <button type="button">
-          <span>{{aluno.id}}</span>
+        <button class="botao" type="button" (click)="seleciona(aluno)">
           <span>{{aluno.nome}}</span>
         </button>
     </li>
+
+<div *ngIf="alunoselect" class="div_lateral">
+    <h2><span>Detalhes de "</span>{{alunoselect.nome | uppercase}}"</h2>
+    <div><span  class="negrito">ID:</span> {{alunoselect.id}}</div>
+    <div><span  class="negrito">Curso:</span> {{alunoselect.curso}}</div>
+    <div>
+    </div>
+</div>

@@ -2,3 +2,17 @@
     font-weight: bold;
     font-size: 1vw;
 }
+
+.botao:hover{
+    display: flex;
+    height: 2vw;
+    width: fit-content;
+    background-color: gray;
+    align-content: center;
+    justify-content: center;
+}
+
+.div_lateral{
+    display: flex;
+    flex-flow: column;
+}
