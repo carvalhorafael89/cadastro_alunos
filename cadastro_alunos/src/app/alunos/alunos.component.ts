@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Alunos } from 'src/mock-alunos';
+import { mockalunos } from 'src/mock-alunos';
 
 @Component({
   selector: 'app-alunos',
   templateUrl: './alunos.component.html',
   styleUrls: ['./alunos.component.css']
 })
-export class AlunosComponent implements OnInit {
+export class lista_alunos implements OnInit {
 
-  alunos = Alunos;
+  lista_alunos = mockalunos;
 
   constructor() { }
 

@@ -1,2 +1,8 @@
 <h2><p>Detalhes de alunos</p></h2>
-<p><app-listar-alunos-edit></app-listar-alunos-edit></p>
+<ul>
+    <li *ngFor="let aluno of lista_alunos">
+        <button type="button">
+          <span>{{aluno.id}}</span>
+          <span>{{aluno.nome}}</span>
+        </button>
+    </li>
