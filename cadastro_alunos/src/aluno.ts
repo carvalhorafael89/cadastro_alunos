@@ -1,4 +1,4 @@
-export interface aluno {
+export interface aluno_int {
     id: number;
     ra: number;
     nome: string;

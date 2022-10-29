@@ -1,6 +1,6 @@
-import { aluno } from '../src/aluno';
+import { aluno_int } from '../src/aluno';
 
-export const mockalunos: aluno[] = [
+export const mockalunos: aluno_int[] = [
   { id: 1, ra: 123, nome: 'Maroteiro', curso: 'ADS', idade: 23 },
   { id: 2, ra: 456, nome: 'Gatinha tímida', curso: 'Eventos', idade: 18 },
   { id: 3, ra: 789, nome: 'Pimpão', curso: 'Eventos', idade: 20 },

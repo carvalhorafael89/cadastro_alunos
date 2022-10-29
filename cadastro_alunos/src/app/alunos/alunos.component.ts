@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SelectMultipleControlValueAccessor } from '@angular/forms';
-import { aluno } from 'src/aluno';
+import { aluno_int } from 'src/aluno';
 import { mockalunos } from 'src/mock-alunos';
 
 @Component({
@@ -9,17 +8,17 @@ import { mockalunos } from 'src/mock-alunos';
   styleUrls: ['./alunos.component.css']
 })
 
-export class lista_alunos_class implements OnInit {
+export class AlunosComponent implements OnInit {
 
   lista_alunos = mockalunos;
-  alunoselect?: aluno;
+  alunoselect?: aluno_int;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  seleciona(lista_alunos: aluno): void
+  seleciona(lista_alunos: aluno_int): void
   {
     this.alunoselect = lista_alunos;
   }

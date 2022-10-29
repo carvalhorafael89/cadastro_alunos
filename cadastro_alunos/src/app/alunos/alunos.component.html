@@ -1,15 +1,36 @@
 <h2><p>Detalhes de alunos</p></h2>
-<ul class="div_lateral">
-    <li *ngFor="let aluno of lista_alunos">
-        <button class="botao" type="button" (click)="seleciona(aluno)">
-          <span>{{aluno.nome}}</span>
-        </button>
-    </li>
 
-<div *ngIf="alunoselect" class="div_lateral">
-    <h2><span>Detalhes de "</span>{{alunoselect.nome | uppercase}}"</h2>
-    <div><span  class="negrito">ID:</span> {{alunoselect.id}}</div>
-    <div><span  class="negrito">Curso:</span> {{alunoselect.curso}}</div>
-    <div>
-    </div>
+<div class="div_lateral">
+<table>
+    <tr>
+        <td class="cabeçalho"><strong>Id</strong></td>
+        <td class="cabeçalho"><strong>Nome</strong></td>
+        <td class="cabeçalho"><strong>Idade</strong></td>
+        <td class="cabeçalho"><strong>Curso</strong></td>
+    </tr>
+
+    <tr class="botao" *ngFor="let aluno of lista_alunos" (click)="seleciona(aluno)">
+        <td>{{aluno.id}}</td>
+        <td>{{aluno.nome}}</td>
+        <td>{{aluno.idade}}</td>
+        <td>{{aluno.curso}}</td>
+    </tr>
+</table>
+
+<div *ngIf="alunoselect" class="detalhes">
+    <h2>Detalhes do Aluno(a)</h2>
+    <h2>{{ alunoselect.nome | uppercase }}</h2>
+
+        <div>
+            <label for="nome">Nome do Aluno: </label>
+            <input class="input" id="nome" [(ngModel)] = "alunoselect.nome" placeholder="Nome" type="text">
+        </div>
+        <div class="details">
+            <label for="idade">Idade do Aluno: </label>
+            <input class="input" id="Idade" [(ngModel)] = "alunoselect.idade" placeholder="Idade" type="text">
+        </div>
+        <div class="details">
+            <label for="curso">Curso: </label>
+            <input class="input" id="Curso" [(ngModel)] = "alunoselect.curso" placeholder="Curso" type="text">
+        </div>
 </div>
